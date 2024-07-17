@@ -3,6 +3,11 @@
 import linkedin from '../../assets/Linkedin.svg';
 import github from '../../assets/Github.svg';
 import behance from '../../assets/Behance.svg';
+
+import linkgif from '../../assets/Linkedin.gif';
+import gitgif from '../../assets/Github.gif';
+import behgif from '../../assets/Behance.gif';
+
 import dribbble from '../../assets/Dribble.svg';
 import upwork from '../../assets/upwork.svg';
 import './navbar.css';
@@ -13,9 +18,9 @@ export const NavBar = () => {
   return (
     <div className="navBar">
         <span className="social-nav">
-          <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons" /></a>
-          <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons" /></a>
-          <a href ="https://www.behance.net/fatmaatta_" target="_blank" className="link-nav"><img src={behance} className="nav-icons" /></a>
+          <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons" id='li' /></a>
+          <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons" id='gh' /></a>
+          <a href ="https://www.behance.net/fatmaatta_" target="_blank" className="link-nav"><img src={behance} className="nav-icons" id='bh' /></a>
           {/* <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={dribbble} className="nav-icons" /></a> */}
         </span>
         <span className="anchor-nav">
@@ -49,3 +54,26 @@ export const NavBar = () => {
     </div>
   );
 }
+
+const li = document.getElementById('li');
+const gh = document.getElementById('gh');
+const bh = document.getElementById('bh');
+
+li.addEventListener('mouseover',()=>{
+  li.src={linkgif};
+});
+gh.addEventListener('mouseover',()=>{
+  gh.src={gitgif};
+});
+bh.addEventListener('mouseover',()=>{
+  bh.src={behgif}
+});
+li.addEventListener('mouseout',()=>{
+  li.src={linkedin};
+});
+gh.addEventListener('mouseout',()=>{
+  gh.src={github};
+});
+bh.addEventListener('mouseout',()=>{
+  bh.src={behance};
+});

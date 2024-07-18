@@ -43,7 +43,7 @@ export const NavBar = () => {
         </span>
         <span className="connect-nav">
           <a href ="https://www.upwork.com/freelancers/~01b76ac6bd7c24c57b" target="_blank" className="link-nav">
-            <span className="connect-text-nav">
+            <span className="connect-text-nav text-nav">
               Let's Connect
             </span>
           </a>
@@ -59,21 +59,21 @@ const li = document.getElementById('li');
 const gh = document.getElementById('gh');
 const bh = document.getElementById('bh');
 
-li.addEventListener('mouseover',()=>{
-  li.src={linkgif};
-});
-gh.addEventListener('mouseover',()=>{
-  gh.src={gitgif};
-});
-bh.addEventListener('mouseover',()=>{
-  bh.src={behgif}
-});
-li.addEventListener('mouseout',()=>{
-  li.src={linkedin};
-});
-gh.addEventListener('mouseout',()=>{
-  gh.src={github};
-});
-bh.addEventListener('mouseout',()=>{
-  bh.src={behance};
-});
+// li.addEventListener('mouseover',()=>{
+//   li.src={linkgif};
+// });
+// gh.addEventListener('mouseover',()=>{
+//   gh.src={gitgif};
+// });
+// bh.addEventListener('mouseover',()=>{
+//   bh.src={behgif}
+// });
+// li.addEventListener('mouseout',()=>{
+//   li.src={linkedin};
+// });
+// gh.addEventListener('mouseout',()=>{
+//   gh.src={github};
+// });
+// bh.addEventListener('mouseout',()=>{
+//   bh.src={behance};
+// });

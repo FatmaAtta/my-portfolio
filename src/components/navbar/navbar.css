@@ -12,7 +12,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
     height:auto;
 }
 
@@ -53,6 +53,10 @@
 
 .link-nav{
     text-decoration: none;
+}
+
+.text-nav{
+    color:aliceblue;
 }
 
 @media (max-width:700px) {

@@ -1,0 +1,8 @@
+body{
+    background-image: url('../../assets/banner.svg');
+    /* background-repeat: no-repeat;
+    width:100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  

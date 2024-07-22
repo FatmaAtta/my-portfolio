@@ -53,7 +53,9 @@
 .anchor-nav>a:hover .text-nav{
     color:white;
 }
-
+.arrow{
+    margin-left:10px;
+}
 .connect-nav{
     width:20%;
     max-width: 220px;

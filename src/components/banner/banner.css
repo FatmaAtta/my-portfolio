@@ -47,6 +47,7 @@ p{
 .animated-text{
   font-size: 2.986rem;
   font-weight: bold;
+  margin-top: 30px;
 }
 
 p, .welcome, .animated-text, a{
@@ -62,7 +63,7 @@ p, .welcome, .animated-text, a{
 .connect{
   width: fit-content;
   text-decoration: none;
-  color: aliceblue;
+  color: #f0f8ff;
   /* padding: 15px 20px; */
   border:solid aliceblue 2px;
   padding:10px 20px;

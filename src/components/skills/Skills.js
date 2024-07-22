@@ -1,5 +1,9 @@
 export const Skills = () => {
     return(
-        console.log(1)
+        <div className="skills-container">
+            <span>Skills</span>
+            
+
+        </div>
     );
 }

@@ -6,7 +6,6 @@ import { Skills } from './components/skills/Skills';
 function App() {
   return (
     <>
-
         <NavBar />
         <Banner />
         <Skills />

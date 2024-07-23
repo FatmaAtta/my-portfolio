@@ -34,8 +34,8 @@ const skills=[
 const skillsMap = skills.map(skill =>
     <Skill 
         logo={skill.imgSrc}
-        langName={skill.langName}
         key={skill.id}
+        langName={skill.langName}
     />
 );
 

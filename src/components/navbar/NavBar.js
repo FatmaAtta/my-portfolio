@@ -7,6 +7,7 @@ import behance from '../../assets/Behance.svg';
 import linkgif from '../../assets/Linkedin.gif';
 import gitgif from '../../assets/Github.gif';
 import behgif from '../../assets/Behance.gif';
+import drgif from '../../assets/Dribble.gif';
 
 import dribbble from '../../assets/Dribble.svg';
 import upwork from '../../assets/upwork.svg';
@@ -22,7 +23,7 @@ export const NavBar = () => {
           <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons" id='li' /></a>
           <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons" id='gh' /></a>
           <a href ="https://www.behance.net/fatmaatta_" target="_blank" className="link-nav"><img src={behance} className="nav-icons" id='bh' /></a>
-          <a href ="https://dribbble.com/FatmaAtta" target="_blank" className="link-nav"><img src={dribbble} className="nav-icons" /></a>
+          <a href ="https://dribbble.com/FatmaAtta" target="_blank" className="link-nav"><img src={dribbble} className="nav-icons" id='db' /></a>
           {/* <a href ="https://www.upwork.com/freelancers/~01b76ac6bd7c24c57b" target="_blank" className="link-nav"><img src={upwork} className="nav-icons" /></a> */}
         </span>
 
@@ -57,4 +58,18 @@ export const NavBar = () => {
         <img src={ham} className='nav-icons ham' />
     </div>
   );
+
 }
+
+document.getElementById('li').addEventListener('mouseover', function(){
+  document.getElementById('li').src= linkgif;
+});
+document.getElementById('gh').addEventListener('mouseover', function(){
+  document.getElementById('gh').src=gitgif;
+});
+document.getElementById('bh').addEventListener('mouseover', function(){
+  document.getElementById('bh').src=behgif;
+});
+document.getElementById('db').addEventListener('mouseover', function(){
+  document.getElementById('li').src=drgif;
+});

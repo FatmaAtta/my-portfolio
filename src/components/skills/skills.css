@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap:10%;
+    grid-auto-rows: min-content;
 }
 
 /* .skills-flex{
@@ -30,6 +31,7 @@
 
 .skill-logo{
     width:100%;
+    max-width: 200px;
 }
 
 /* .skill-logo{
@@ -54,13 +56,31 @@
 
 }
 @media (max-width:980px){
-
+    .skills-flex{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* gap:10%; */
+    }
 }
-@media (max-width:576px){
-
+@media (max-width:600px){
+    .skills-flex{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* gap:10%; */
+    }
 }
 @media (max-width:470px){
-
+    .skills-flex{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* gap:10%; */
+        margin:0px;
+        grid-auto-rows: min-content;
+    }
+    .skill-logo{
+        max-width: 100px;
+        justify-self: center;
+    }
 }
 
 

@@ -61,15 +61,15 @@ export const NavBar = () => {
 
 }
 
-document.getElementById('li').addEventListener('mouseover', function(){
-  document.getElementById('li').src= linkgif;
-});
-document.getElementById('gh').addEventListener('mouseover', function(){
-  document.getElementById('gh').src=gitgif;
-});
-document.getElementById('bh').addEventListener('mouseover', function(){
-  document.getElementById('bh').src=behgif;
-});
-document.getElementById('db').addEventListener('mouseover', function(){
-  document.getElementById('li').src=drgif;
-});
+// document.getElementById('li').addEventListener('mouseover', function(){
+//   document.getElementById('li').src= linkgif;
+// });
+// document.getElementById('gh').addEventListener('mouseover', function(){
+//   document.getElementById('gh').src=gitgif;
+// });
+// document.getElementById('bh').addEventListener('mouseover', function(){
+//   document.getElementById('bh').src=behgif;
+// });
+// document.getElementById('db').addEventListener('mouseover', function(){
+//   document.getElementById('li').src=drgif;
+// });

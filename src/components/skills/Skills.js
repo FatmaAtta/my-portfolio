@@ -1,4 +1,5 @@
 import "./skills.css"
+import { useState } from "react";
 import { Skill } from './Skill';
 import html from '../../assets/html.svg';
 import css from '../../assets/css.svg';
@@ -40,12 +41,26 @@ const skillsMap = skills.map(skill =>
 );
 
 export const Skills = () => {
+    const [count, setCount] = useState(()=>{return 0;});
+
+    function decrement(){
+        setCount(prevCount => prevCount - 1);
+    }
+    function increment(){
+        setCount(prevCount => prevCount + 1);
+    }
     return(
-        <div className="skills-container">
-            <span className="title">Skills</span>
-            <div className="skills-flex">
-                {skillsMap}
-            </div>
-        </div>
+        // <div className="skills-container">
+        //     <span className="title">Skills</span>
+        //     <div className="skills-flex">
+        //         {skillsMap}
+        //     </div>
+        // </div>
+
+        <>
+            <button onClick={decrement}>-</button>
+            <span>{count}</span>
+            <button onClick={increment}>+</button>
+        </>
     );
 }

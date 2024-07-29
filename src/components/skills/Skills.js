@@ -41,14 +41,8 @@ const skillsMap = skills.map(skill =>
 );
 
 export const Skills = () => {
-    const [count, setCount] = useState(()=>{return 0;});
+    const [resource, setResource] = useState(()=>{return 'Posts'});
 
-    function decrement(){
-        setCount(prevCount => prevCount - 1);
-    }
-    function increment(){
-        setCount(prevCount => prevCount + 1);
-    }
     return(
         // <div className="skills-container">
         //     <span className="title">Skills</span>
@@ -58,9 +52,10 @@ export const Skills = () => {
         // </div>
 
         <>
-            <button onClick={decrement}>-</button>
-            <span>{count}</span>
-            <button onClick={increment}>+</button>
+            <button onClick={() => setResource('Posts')}>Posts</button>
+            <button onClick={() => setResource('Likes')}>Likes</button>
+            <button onClick={() => setResource('Comments')}>Comments</button>
+            <div>{resource}</div>
         </>
     );
 }

@@ -42,7 +42,6 @@ const skillsMap = skills.map(skill =>
 
 export const Skills = () => {
     const [resource, setResource] = useState(()=>{return 'Posts'});
-    useEffect
     return(
         // <div className="skills-container">
         //     <span className="title">Skills</span>

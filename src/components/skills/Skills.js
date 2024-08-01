@@ -43,18 +43,18 @@ const skillsMap = skills.map(skill =>
 export const Skills = () => {
     const [resource, setResource] = useState(()=>{return 'Posts'});
     return(
-        // <div className="skills-container">
-        //     <span className="title">Skills</span>
-        //     <div className="skills-flex">
-        //         {skillsMap}
-        //     </div>
-        // </div>
+        <div className="skills-container">
+            <span className="title">Skills</span>
+            <div className="skills-flex">
+                {skillsMap}
+            </div>
+        </div>
 
-        <>
-            <button onClick={() => setResource('Posts')}>Posts</button>
-            <button onClick={() => setResource('Likes')}>Likes</button>
-            <button onClick={() => setResource('Comments')}>Comments</button>
-            <div>{resource}</div>
-        </>
+        // <>
+        //     <button onClick={() => setResource('Posts')}>Posts</button>
+        //     <button onClick={() => setResource('Likes')}>Likes</button>
+        //     <button onClick={() => setResource('Comments')}>Comments</button>
+        //     <div>{resource}</div>
+        // </>
     );
 }

@@ -6,9 +6,13 @@ import { Skills } from './components/skills/Skills';
 function App() {
   return (
     <>
-        <NavBar />
-        <Banner />
-        <Skills />
+      {/* <div className='banner-img'> */}
+          <NavBar />
+          <Banner />
+      {/* </div> */}
+      {/* <div className='gradient'> */}
+          <Skills />
+      {/* </div> */}
     </>
       
   );

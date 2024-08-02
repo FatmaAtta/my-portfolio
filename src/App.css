@@ -1,11 +1,16 @@
+
 body{
-    background-image: url('./assets/banner.svg');
-    /* background-repeat: no-repeat;
-    width:100%; */
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height:970px;
+  background-image: url('./assets/banner.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* width:100%; */
+  background-size: cover;
+  /* background-image: url('./assets/banner.svg'); */
+  /* linear-gradient(to bottom, #cfbbedff, #b476cfff, #8763baff  ); */
 }
+/* .gradient{
+  background: linear-gradient(to bottom, #cfbbedff, #b476cfff, #8763baff  );
+} */
 
 html{
     font-size: 16px;

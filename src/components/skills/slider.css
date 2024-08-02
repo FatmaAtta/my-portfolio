@@ -1,0 +1,39 @@
+.swiper-pagination{
+    margin-bottom:15px;
+}
+
+.swiper-scrollbar-drag{
+    height:15px;
+    padding-bottom: 10px;
+    /* margin:10px; */
+    border-radius: 50px;
+}
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    height:15px;
+    margin: 0 auto;
+    /* margin-right:30px; */
+    padding-bottom: 10px;
+    /* width:50%; */
+}
+
+.swiper-scrollbar-drag:active, .swiper-scrollbar-drag:hover{
+    background-color: #f0f8ff;
+}
+
+.custom-next{
+    background-image: url('../../assets/next.svg');
+    width: 50px;
+    margin-left:50px;
+    position:absolute;
+    top:30%;
+    right:15px;
+}
+.custom-prev{
+    background-image: url('../../assets/next.svg');
+    width: 50px;
+    position:absolute;
+    margin-right:20px;
+    top:30%;
+    left:15px;
+    transform: scaleX(-1)
+}

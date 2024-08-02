@@ -1,7 +1,9 @@
 .skills-container{
     background-color: rgba(151, 107, 196, 0.5);
-    margin:80px;
+    margin: 80px;
     border-radius:25px;
+    text-align: center;
+    /* padding: 20px; */
 }
 
 .title{
@@ -9,35 +11,27 @@
     font-weight: bold;
     color:aliceblue;
     font-family: monospace;
-    /* margin:40%; */
+    /* margin-top:80px; */
+    padding: 30px;
+    padding-bottom: 20px;
 }
-
-.skills-flex{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:10%;
-    grid-auto-rows: min-content;
-}
-
-/* .skills-flex{
-    display: grid;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    margin:50px;
-    gap:100px;
-    align-items: center;
-} */
 
 .skill-logo{
-    width:100%;
-    max-width: 200px;
-}
-
-/* .skill-logo{
+    background: linear-gradient(to bottom right,rgb(233, 125, 238),#3d0263);
+    /* background: linear-gradient(to bottom right, #7a5eb5ff, #feb47b); */
     width:150px;
-    height:150px;
-} */
+    /* border-style: solid; */
+    border-radius: 75px;
+    border-color: #e0e0e000;
+    /* border-color: aliceblue; */
+    border-width: 5px;
+    padding: 15px;
+    margin-bottom: 50px;
+    margin-left:50px;
+    margin-right: 50px;
+    /* width:100%; */
+    /* max-width: 150px; */
+}
 
 
 @media (max-width:1400px){
@@ -53,33 +47,23 @@
 
 }
 @media (max-width:1050px){
-
-}
-@media (max-width:980px){
-    .skills-flex{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        /* gap:10%; */
+    .skill-logo{
+        width:100px;
+        padding:15px;
     }
 }
+@media (max-width:980px){
+
+}
 @media (max-width:600px){
-    .skills-flex{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        /* gap:10%; */
+
+}
+@media (max-width:576px){
+    .skills-container{
+        margin:auto;
     }
 }
 @media (max-width:470px){
-    .skills-flex{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        /* gap:10%; */
-        margin:0px;
-        grid-auto-rows: min-content;
-    }
-    .skill-logo{
-        max-width: 100px;
-        justify-self: center;
-    }
+
 }
 

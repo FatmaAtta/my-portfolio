@@ -1,7 +1,14 @@
-import "./skills.css"
-import { useState } from "react";
+import "./skills.css";
+import "./slider.css";
+import { Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import { Skill } from './Skill';
 import html from '../../assets/html.svg';
+import next from '../../assets/next.svg';
 import css from '../../assets/css.svg';
 import js from '../../assets/js.svg';
 import python from '../../assets/python.svg';
@@ -14,6 +21,8 @@ import sql from '../../assets/sql-server.svg';
 import cpp from '../../assets/cpp.svg';
 import java from '../../assets/java.svg';
 import kotlin from '../../assets/kotlin.svg';
+// import { keyboard } from "@testing-library/user-event/dist/keyboard";
+// import { useState, useEffect } from "react";
 
 
 const skills=[
@@ -33,28 +42,63 @@ const skills=[
 ]
 
 const skillsMap = skills.map(skill =>
-    <Skill 
-        logo={skill.imgSrc}
-        key={skill.id}
-        langName={skill.langName}
-    />
+    <SwiperSlide>
+        <Skill 
+            logo={skill.imgSrc}
+            key={skill.id}
+            langName={skill.langName}
+        />
+    </SwiperSlide>
 );
 
 export const Skills = () => {
-    const [resource, setResource] = useState(()=>{return 'Posts'});
+
     return(
         <div className="skills-container">
-            <span className="title">Skills</span>
-            <div className="skills-flex">
+            <h1 className="title">Skills</h1>
+            <Swiper 
+                modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel, Autoplay]}
+                spaceBetween={0}
+                loop={true}
+                mousewheel={true}
+                grabCursor={true}
+                autoplay={{
+                    delay:2000,
+                    disableOnInteraction:false,
+                }}
+                breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      slidesPerGroup: 1,
+                    },
+                    480: {
+                      slidesPerView: 2,
+                      slidesPerGroup: 2,
+                    },
+                    640: {
+                      slidesPerView: 3,
+                      slidesPerGroup: 3,
+                    },
+                    769: {
+                      slidesPerView: 4,
+                      slidesPerGroup: 4,
+                    },
+                    1100: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5,
+                    },
+                  }}
+                navigation={{ nextEl:'.custom-next', prevEl: '.custom-prev'}}
+                keyboard={{enabled: true,}}
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}
+            >
+            <img src={next} className="custom-prev" /> 
                 {skillsMap}
-            </div>
+            <img src={next} className="custom-next" /> 
+            </Swiper>
         </div>
-
-        // <>
-        //     <button onClick={() => setResource('Posts')}>Posts</button>
-        //     <button onClick={() => setResource('Likes')}>Likes</button>
-        //     <button onClick={() => setResource('Comments')}>Comments</button>
-        //     <div>{resource}</div>
-        // </>
     );
 }

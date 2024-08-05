@@ -17,21 +17,29 @@
 }
 
 .skill-logo{
-    background: linear-gradient(to bottom right,rgb(233, 125, 238),#3d0263);
+    /* background: linear-gradient(to bottom right,rgb(233, 125, 238),#3d0263); */
     /* background: linear-gradient(to bottom right, #7a5eb5ff, #feb47b); */
     width:150px;
     /* border-style: solid; */
-    border-radius: 75px;
+    /* border-radius: 75px; */
     border-color: #e0e0e000;
     /* border-color: aliceblue; */
     border-width: 5px;
     padding: 15px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     margin-left:50px;
     margin-right: 50px;
+    transition: background-color 2s;
 
 }
-
+.skill-logo:hover{
+    background: linear-gradient(to right, #7b5eb5AA, #af78cfAA);
+    border-radius: 10px;
+}
+/* 
+.skills-map{
+    padding: 100px;
+} */
 
 @media (max-width:1400px){
 
@@ -47,7 +55,7 @@
 }
 @media (max-width:1050px){
     .skill-logo{
-        width:100px;
+        width:130px;
         padding:15px;
     }
 }
@@ -63,6 +71,9 @@
     }
 }
 @media (max-width:470px){
-
+    .skill-logo{
+        width:110px;
+        padding:15px;
+    }
 }
 

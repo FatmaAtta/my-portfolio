@@ -58,13 +58,13 @@ export const Skills = () => {
             <h1 className="title">Skills</h1>
             <Swiper 
                 modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel, Autoplay]}
-                spaceBetween={0}
+                spaceBetween={-100}
                 loop={true}
                 mousewheel={true}
                 grabCursor={true}
                 autoplay={{
                     delay:2000,
-                    disableOnInteraction:false,
+                    disableOnInteraction:true,
                 }}
                 breakpoints={{
                     320: {
@@ -96,7 +96,9 @@ export const Skills = () => {
                 onSlideChange={() => console.log('slide change')}
             >
             <img src={next} className="custom-prev" /> 
+            <div className="skills-map">
                 {skillsMap}
+            </div>
             <img src={next} className="custom-next" /> 
             </Swiper>
         </div>

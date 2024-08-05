@@ -1,7 +1,9 @@
 .swiper-pagination{
     margin-bottom:15px;
 }
-
+.skills-container .swiper {
+    padding-bottom: 60px; /* Adjust the value as needed */
+}
 .swiper-scrollbar-drag{
     height:15px;
     padding-bottom: 10px;
@@ -23,17 +25,21 @@
 .custom-next{
     background-image: url('../../assets/next.svg');
     width: 50px;
-    margin-left:50px;
+    margin-left:20px;
+    margin-right:20px;
     position:absolute;
-    top:30%;
-    right:15px;
+    z-index: 10;
+    top:25%;
+    right:10px;
 }
 .custom-prev{
     background-image: url('../../assets/next.svg');
     width: 50px;
     position:absolute;
     margin-right:20px;
-    top:30%;
-    left:15px;
+    margin-left:20px;
+    top:25%;
+    z-index: 10;
+    left:10px;
     transform: scaleX(-1)
 }

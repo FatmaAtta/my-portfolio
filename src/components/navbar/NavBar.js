@@ -4,6 +4,9 @@ import linkedin from '../../assets/Linkedin.svg';
 import github from '../../assets/Github.svg';
 import behance from '../../assets/Behance.svg';
 
+import { useState, createContext } from 'react';
+import { HamburgerMenu } from '../hamburger/Hamburger';
+
 import linkgif from '../../assets/Linkedin.gif';
 import gitgif from '../../assets/Github.gif';
 import behgif from '../../assets/Behance.gif';
@@ -16,14 +19,24 @@ import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCode, faScrewdriverWrench, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+export const HamContext = createContext();
+
 export const NavBar = () => {
+
+  const [isHamOpen, setHamOpen] = useState(false);
+  const toggleMenu = () => {
+    setHamOpen(prevState => ! prevState);
+    console.log("toggle");
+    console.log(isHamOpen);
+  };
+
   return (
     <div className="navBar">
         <span className="social-nav">
-          <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons" id='li' /></a>
-          <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons" id='gh' /></a>
-          <a href ="https://www.behance.net/fatmaatta_" target="_blank" className="link-nav"><img src={behance} className="nav-icons" id='bh' /></a>
-          <a href ="https://dribbble.com/FatmaAtta" target="_blank" className="link-nav"><img src={dribbble} className="nav-icons" id='db' /></a>
+          <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons nav-icons-logo" id='li' /></a>
+          <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons nav-icons-logo" id='gh' /></a>
+          <a href ="https://www.behance.net/fatmaatta_" target="_blank" className="link-nav"><img src={behance} className="nav-icons nav-icons-logo" id='bh' /></a>
+          <a href ="https://dribbble.com/FatmaAtta" target="_blank" className="link-nav"><img src={dribbble} className="nav-icons nav-icons-logo" id='db' /></a>
           {/* <a href ="https://www.upwork.com/freelancers/~01b76ac6bd7c24c57b" target="_blank" className="link-nav"><img src={upwork} className="nav-icons" /></a> */}
         </span>
 
@@ -55,21 +68,11 @@ export const NavBar = () => {
             <img src={upwork} className="nav-icons upwork" />
           </a>
         </span>
-        <img src={ham} className='nav-icons ham' />
+        <span className='ham'  >
+          <img src={ham} className='nav-icons ham' onClick={toggleMenu} />
+        </span>
     </div>
   );
 
 }
 
-// document.getElementById('li').addEventListener('mouseover', function(){
-//   document.getElementById('li').src= linkgif;
-// });
-// document.getElementById('gh').addEventListener('mouseover', function(){
-//   document.getElementById('gh').src=gitgif;
-// });
-// document.getElementById('bh').addEventListener('mouseover', function(){
-//   document.getElementById('bh').src=behgif;
-// });
-// document.getElementById('db').addEventListener('mouseover', function(){
-//   document.getElementById('li').src=drgif;
-// });

@@ -21,8 +21,6 @@ import sql from '../../assets/sql-server.svg';
 import cpp from '../../assets/cpp.svg';
 import java from '../../assets/java.svg';
 import kotlin from '../../assets/kotlin.svg';
-// import { keyboard } from "@testing-library/user-event/dist/keyboard";
-// import { useState, useEffect } from "react";
 
 
 const skills=[
@@ -64,7 +62,7 @@ export const Skills = () => {
                 grabCursor={true}
                 autoplay={{
                     delay:2000,
-                    disableOnInteraction:true,
+                    disableOnInteraction:false,
                 }}
                 breakpoints={{
                     320: {
@@ -94,7 +92,7 @@ export const Skills = () => {
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSlideChange={() => console.log('slide change')}
             >
             <img src={next} className="custom-prev" /> 
             <div className="skills-map">

@@ -82,6 +82,7 @@ export const Skills = () => {
                     769: {
                       slidesPerView: 4,
                       slidesPerGroup: 4,
+                    //   spaceBetween={-50},
                     },
                     1100: {
                         slidesPerView: 5,

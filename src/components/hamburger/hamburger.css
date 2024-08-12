@@ -2,5 +2,8 @@
     background-color: black;
     width:200px;
     height:500px;
-    /* z-index: 5000; */
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    /* display: none; */
 }

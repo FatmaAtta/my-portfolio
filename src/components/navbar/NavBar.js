@@ -4,8 +4,10 @@ import linkedin from '../../assets/Linkedin.svg';
 import github from '../../assets/Github.svg';
 import behance from '../../assets/Behance.svg';
 
-import { useState, createContext } from 'react';
+import { useState, createContext, useContext } from 'react';
 import { HamburgerMenu } from '../hamburger/Hamburger';
+import { HamProvider } from '../hamburger/HamProvider';
+import { HamContext } from '../hamburger/HamProvider';
 
 import linkgif from '../../assets/Linkedin.gif';
 import gitgif from '../../assets/Github.gif';
@@ -19,16 +21,11 @@ import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCode, faScrewdriverWrench, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-export const HamContext = createContext();
-
 export const NavBar = () => {
-
-  const [isHamOpen, setHamOpen] = useState(false);
-  const toggleMenu = () => {
-    setHamOpen(prevState => ! prevState);
-    console.log("toggle");
-    console.log(isHamOpen);
-  };
+  const {toggleMenu} = useContext(HamContext);
+  const hamToggle = () => {
+    toggleMenu();
+  }
 
   return (
     <div className="navBar">
@@ -69,7 +66,7 @@ export const NavBar = () => {
           </a>
         </span>
         <span className='ham'  >
-          <img src={ham} className='nav-icons ham' onClick={toggleMenu} />
+          <img src={ham} className='nav-icons ham' onClick={hamToggle} />
         </span>
     </div>
   );

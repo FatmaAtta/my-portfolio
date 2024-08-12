@@ -6,6 +6,7 @@ export const HamProvider = ({ children }) => {
   const [isHamOpen, setHamOpen] = useState(false);
 
   const toggleMenu = () => {
+    console.log("toggle click");
     setHamOpen(prevState => !prevState);
   };
 

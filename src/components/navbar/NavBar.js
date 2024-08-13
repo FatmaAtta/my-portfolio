@@ -17,15 +17,18 @@ import drgif from '../../assets/Dribble.gif';
 import dribbble from '../../assets/Dribble.svg';
 import upwork from '../../assets/upwork.svg';
 import ham from '../../assets/hamburger.svg';
+import cross from '../../assets/cross.svg';
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCode, faScrewdriverWrench, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export const NavBar = () => {
   const {toggleMenu} = useContext(HamContext);
+  const {isHamOpen} = useContext(HamContext)
   const hamToggle = () => {
     toggleMenu();
   }
+  const hamIcon = isHamOpen? cross: ham;
 
   return (
     <div className="navBar">
@@ -65,8 +68,8 @@ export const NavBar = () => {
             <img src={upwork} className="nav-icons upwork" />
           </a>
         </span>
-        <span className='ham'  >
-          <img src={ham} className='nav-icons ham' onClick={hamToggle} />
+        <span className='ham'>
+          <img src={hamIcon} className= {`nav-icons ham-icon {isHamOpen ? 'ham-open' : 'ham-closed'}`} onClick={hamToggle} />
         </span>
     </div>
   );

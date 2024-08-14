@@ -1,8 +1,11 @@
 .hamburger-menu{
-    background-color: black;
-    width:80%;
+    /* background-color: #7b5eb4; */
+    /* background-color: #9368bf; */
+    border-bottom-left-radius: 25px;
+    width:50%;
     height: 90%;
     min-height:600px;
+    padding: 25px;
     position: absolute;
     top: 0%;
     right: 0%;
@@ -15,8 +18,9 @@
 }
 .ham-icon{
     position: absolute;
-    top:2%;
-    right:2%;
+    width:50px;
+    top:20px;
+    right:20px;
 
 }
 

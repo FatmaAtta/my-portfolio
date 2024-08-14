@@ -69,7 +69,7 @@ export const NavBar = () => {
           </a>
         </span>
         <span className='ham'>
-          <img src={hamIcon} className= {`nav-icons ham-icon {isHamOpen ? 'ham-open' : 'ham-closed'}`} onClick={hamToggle} />
+          <img src={hamIcon} className='nav-icons' onClick={hamToggle} />
         </span>
     </div>
   );

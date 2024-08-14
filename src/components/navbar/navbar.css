@@ -114,9 +114,6 @@
     .anchor-nav, .connect-nav{
         display:none;
     }
-    /* .ham{
-        display:block;
-    } */
 }
 @media (max-width:992px){
 

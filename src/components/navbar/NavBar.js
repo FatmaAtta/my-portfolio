@@ -4,7 +4,7 @@ import linkedin from '../../assets/Linkedin.svg';
 import github from '../../assets/Github.svg';
 import behance from '../../assets/Behance.svg';
 
-import { useState, createContext, useContext } from 'react';
+import { useState, createContext, useContext, useEffect } from 'react';
 import { HamburgerMenu } from '../hamburger/Hamburger';
 import { HamProvider } from '../hamburger/HamProvider';
 import { HamContext } from '../hamburger/HamProvider';
@@ -29,9 +29,24 @@ export const NavBar = () => {
     toggleMenu();
   }
   const hamIcon = isHamOpen? cross: ham;
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="navBar" id='nav-bar'>
+    <div className={`navBar ${isScrolled ? 'scrolled' : ''}`} id='nav-bar'>
         <span className="social-nav">
           <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons nav-icons-logo" id='li' /></a>
           <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons nav-icons-logo" id='gh' /></a>

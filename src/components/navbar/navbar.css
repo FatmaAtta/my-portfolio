@@ -19,6 +19,9 @@
     top:0;
     z-index:1000;
 }
+.scrolled{
+    background-color: black;
+}
 
 .navBar>span{
     margin:20px;

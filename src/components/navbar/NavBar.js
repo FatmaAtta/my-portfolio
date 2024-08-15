@@ -29,24 +29,46 @@ export const NavBar = () => {
     toggleMenu();
   }
   const hamIcon = isHamOpen? cross: ham;
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const offset = window.scrollY;
+  //     if (offset > 50) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  const [bgColor, setBgColor] = useState('transparent');
+
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setIsScrolled(true);
+      const bannerSection = document.getElementById('home');
+      const bannerTop = bannerSection.getBoundingClientRect().top;
+
+      if (bannerTop <= 0) {
+        // setBgColor('rgba(0%,0%,0%,90%)'); // Change color when Banner is reached
+        // setBgColor('rgba(0%,0%,0%,80%)'); // Change color when Banner is reached
+        setBgColor('rgba(25, 0, 60, 0.9)'); // Change color when Banner is reached
+        // setBgColor('rgba(30, 0, 60, 0.8)'); // Change color when Banner is reached
+        // setBgColor('#df9ced'); // Change color when Banner is reached
       } else {
-        setIsScrolled(false);
+        setBgColor('transparent'); // Default color before reaching Banner
       }
     };
+
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`navBar ${isScrolled ? 'scrolled' : ''}`} id='nav-bar'>
+    <div className='navBar' id='nav-bar' style={{ backgroundColor: bgColor }}>
         <span className="social-nav">
           <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons nav-icons-logo" id='li' /></a>
           <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons nav-icons-logo" id='gh' /></a>

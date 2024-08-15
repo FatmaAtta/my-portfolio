@@ -52,7 +52,7 @@ const skillsMap = skills.map(skill =>
 export const Skills = () => {
 
     return(
-        <div className="skills-container">
+        <div className="skills-container" id="skills">
             <h1 className="title">Skills</h1>
             <Swiper 
                 modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard, Mousewheel, Autoplay]}

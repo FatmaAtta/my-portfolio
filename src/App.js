@@ -5,6 +5,8 @@ import { Skills } from './components/skills/Skills';
 import { HamProvider } from './components/hamburger/HamProvider';
 import { HamWrapper } from './components/hamburger/HamWrapper';
 
+// tarakseet??
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
           <Banner />
         <Skills />
       </HamProvider>
+
     </>
       
   );

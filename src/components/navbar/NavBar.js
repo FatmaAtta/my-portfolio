@@ -31,7 +31,7 @@ export const NavBar = () => {
   const hamIcon = isHamOpen? cross: ham;
 
   return (
-    <div className="navBar">
+    <div className="navBar" id='nav-bar'>
         <span className="social-nav">
           <a href ="https://www.linkedin.com/in/fatmaatta/" target="_blank" className="link-nav"><img src={linkedin} className="nav-icons nav-icons-logo" id='li' /></a>
           <a href ="https://github.com/FatmaAtta" target="_blank" className="link-nav"><img src={github} className="nav-icons nav-icons-logo" id='gh' /></a>

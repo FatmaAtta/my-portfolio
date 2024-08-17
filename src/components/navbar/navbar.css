@@ -10,7 +10,7 @@
 }
 
 .navBar{
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -72,17 +72,26 @@
     border-width: 2px;
     padding:10px 15px;
 }
-
-.connect-nav:hover, .connect-nav:active{
-    border-color: rgba(0%,0%,0%,10%);
-    background-color:rgba(0%,0%,0%,60%);
-    transition: background-color 0.5s;
-}
 .text-nav{
     color:aliceblue;
     font-size: 1rem;
     /* transition: transform 0.2s ease-in-out; */
 }
+.connect-nav:hover, .connect-nav:active{
+    /* border-color: aliceblue; */
+    
+    /* border-color: rgb(255, 119, 0); */
+    /* border-color: #fcca3fff; */
+    border-color: rgba(0%,0%,0%,100%);
+    background-color:rgba(0%,0%,0%,80%);
+    /* background-color:#f0f8ffff; */
+    /* color:black; */
+    transition: background-color 0.5s;
+}
+/* .connect-nav:hover .connect-text-nav, .connect-nav:active .connect-text-nav{
+    color: rgba(25, 0, 60, 0.9);
+} */
+
 .connect-nav:hover .text-nav{
     color:white;
 }

@@ -55,7 +55,7 @@ export const NavBar = () => {
       if (bannerTop <= 0) {
         // setBgColor('rgba(0%,0%,0%,90%)'); // Change color when Banner is reached
         // setBgColor('rgba(0%,0%,0%,80%)'); // Change color when Banner is reached
-        setBgColor('rgba(25, 0, 60, 0.9)'); // Change color when Banner is reached
+        setBgColor('rgba(25, 0, 60, 1)'); // Change color when Banner is reached
         // setBgColor('rgba(30, 0, 60, 0.8)'); // Change color when Banner is reached
         // setBgColor('#df9ced'); // Change color when Banner is reached
       } else {

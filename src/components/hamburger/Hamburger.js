@@ -14,7 +14,7 @@ export const HamburgerMenu = () => {
     const hamIcon = isHamOpen? cross: ham;
     return(
         <div className={`hamburger-menu ${isHamOpen ? 'ham-open' : 'ham-closed'}`}>
-            <img src={hamIcon} className= "ham-icon" onClick={hamToggle} />
+            {/* <img src={hamIcon} className= "ham-icon" onClick={hamToggle} /> */}
             <a href="" onClick={hamToggle}><div className='link-nav'>Home</div></a>
             <a href="" onClick={hamToggle}><div className='link-nav'>Skills</div></a>
             <a href="" onClick={hamToggle}><div className='link-nav'>Projects</div></a>

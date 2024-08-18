@@ -29,22 +29,6 @@ export const NavBar = () => {
     toggleMenu();
   }
   const hamIcon = isHamOpen? cross: ham;
-  // const [isScrolled, setIsScrolled] = useState(false);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const offset = window.scrollY;
-  //     if (offset > 50) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
   const [bgColor, setBgColor] = useState('transparent');
 
   useEffect(() => {
@@ -53,11 +37,7 @@ export const NavBar = () => {
       const bannerTop = bannerSection.getBoundingClientRect().top;
 
       if (bannerTop <= 0) {
-        // setBgColor('rgba(0%,0%,0%,90%)'); // Change color when Banner is reached
-        // setBgColor('rgba(0%,0%,0%,80%)'); // Change color when Banner is reached
         setBgColor('rgba(25, 0, 60, 1)'); // Change color when Banner is reached
-        // setBgColor('rgba(30, 0, 60, 0.8)'); // Change color when Banner is reached
-        // setBgColor('#df9ced'); // Change color when Banner is reached
       } else {
         setBgColor('transparent'); // Default color before reaching Banner
       }

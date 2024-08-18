@@ -15,8 +15,8 @@ function App() {
         <HamWrapper />
           <NavBar />
           <Banner />
-        <Skills />
-        <Projects />
+          <Skills />
+          <Projects />
       </HamProvider>
 
     </>

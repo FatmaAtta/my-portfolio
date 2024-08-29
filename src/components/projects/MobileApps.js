@@ -1,7 +1,7 @@
 export const MobileApps = () => {
     return(
         <>
-        hello
+        hello1
         </>
     );
 }

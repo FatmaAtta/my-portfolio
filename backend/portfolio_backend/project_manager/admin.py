@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Technology, Category, Project
+from .models import Technology, Category, Project, Status
 
 @admin.register(Technology)
 class TechnologyAdmin(admin.ModelAdmin):
@@ -8,6 +8,11 @@ class TechnologyAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+@admin.register(Status)
+class StatusAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
